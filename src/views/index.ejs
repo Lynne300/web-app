@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anonymous Support - Safe Space for Students</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <%- include('partials/header') %>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1>Safe Anonymous Support</h1>
+          <p>
+            Connect with fellow students in a secure, judgment-free environment
+          </p>
+          <div class="cta-buttons">
+            <a href="/auth/signup" class="btn btn-primary">Get Started</a>
+            <a href="#how-it-works" class="btn btn-outline">Learn More</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img
+            src="/images/councellin-image.jpg"
+            alt="Students connecting"
+            onerror="this.onerror=null; this.src='/images/fallback-image.jpg';"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+      <h2>Why Choose Anonymous Support?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <i class="fas fa-user-shield"></i>
+          <h3>Complete Anonymity</h3>
+          <p>Your identity remains protected while you connect with others</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-comments"></i>
+          <h3>Real-time Chat</h3>
+          <p>Instant messaging with other students who understand</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-heart"></i>
+          <h3>Supportive Community</h3>
+          <p>Connect with peers who share similar experiences</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-icon">
+            <i class="fas fa-user-plus"></i>
+          </div>
+          <h3>Create Account</h3>
+          <p>Sign up with minimal information required</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <h3>Find Support</h3>
+          <p>Connect with other students online</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">
+            <i class="fas fa-comments"></i>
+          </div>
+          <h3>Start Chatting</h3>
+          <p>Begin anonymous conversations safely</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="about-container">
+        <div class="about-content">
+          <h2>Supporting Student Mental Health</h2>
+          <p>
+            We believe every student deserves access to mental health support in
+            a safe, judgment-free environment. Our platform connects you with
+            fellow students and professional counselors who understand the
+            unique challenges of student life.
+          </p>
+          <p>
+            Whether you're dealing with academic stress, personal challenges, or
+            just need someone to talk to, our community is here to support you
+            on your journey.
+          </p>
+          <div class="about-stats">
+            <div class="stat-item">
+              <div class="stat-number">5000+</div>
+              <div class="stat-label">Students Helped</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">Support Available</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">50+</div>
+              <div class="stat-label">Professional Counselors</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Anonymous</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-image">
+          <img
+            src="https://images.unsplash.com/photo-1604881991720-f91add269bed?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3VwcG9ydHxlbnwwfDF8MHx8fDA%3D"
+            alt="Students supporting each other"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Counselors Section -->
+    <section id="counselors" class="counselors">
+      <div class="counselors-header">
+        <h2>Meet Our Counselors</h2>
+        <p>
+          Our team of licensed professional counselors is here to provide you
+          with the support you need.
+        </p>
+      </div>
+      <div class="counselors-grid">
+        <!-- Example Counselor Cards -->
+        <div class="counselor-card">
+          <img
+            src="https://media.istockphoto.com/id/1386479313/photo/happy-millennial-afro-american-business-woman-posing-isolated-on-white.webp?a=1&b=1&s=612x612&w=0&k=20&c=OnzQRmrTWj779-DI4_aEykdTKuwL-Ubphs1cdQ3tyxE="
+            alt="Counselor"
+            class="counselor-image"
+          />
+          <div class="counselor-info">
+            <h3>Dr. Sarah Johnson</h3>
+            <div class="specialty">Academic Stress & Anxiety</div>
+            <p>
+              Specializing in helping students manage academic pressure and
+              anxiety with 10+ years of experience.
+            </p>
+            <a href="/counselors/profile/1" class="btn btn-outline"
+              >View Profile</a
+            >
+          </div>
+        </div>
+        <!-- Add more counselor cards here -->
+        <div class="counselor-card">
+          <img
+            src="https://media.istockphoto.com/id/1386479313/photo/happy-millennial-afro-american-business-woman-posing-isolated-on-white.webp?a=1&b=1&s=612x612&w=0&k=20&c=OnzQRmrTWj779-DI4_aEykdTKuwL-Ubphs1cdQ3tyxE="
+            alt="Counselor"
+            class="counselor-image"
+          />
+          <div class="counselor-info">
+            <h3>Dr. Sarah Johnson</h3>
+            <div class="specialty">Academic Stress & Anxiety</div>
+            <p>
+              Specializing in helping students manage academic pressure and
+              anxiety with 10+ years of experience.
+            </p>
+            <a href="/counselors/profile/1" class="btn btn-outline"
+              >View Profile</a
+            >
+          </div>
+        </div>
+        <div class="counselor-card">
+          <img
+            src="https://media.istockphoto.com/id/1386479313/photo/happy-millennial-afro-american-business-woman-posing-isolated-on-white.webp?a=1&b=1&s=612x612&w=0&k=20&c=OnzQRmrTWj779-DI4_aEykdTKuwL-Ubphs1cdQ3tyxE="
+            alt="Counselor"
+            class="counselor-image"
+          />
+          <div class="counselor-info">
+            <h3>Dr. Sarah Johnson</h3>
+            <div class="specialty">Academic Stress & Anxiety</div>
+            <p>
+              Specializing in helping students manage academic pressure and
+              anxiety with 10+ years of experience.
+            </p>
+            <a href="/counselors/profile/1" class="btn btn-outline"
+              >View Profile</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="view-all-counselors">
+        <a href="/counselors" class="btn btn-primary">View All Counselors</a>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2>Get in Touch</h2>
+      <div class="contact-container">
+        <form class="contact-form">
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Your Email" required />
+          </div>
+          <div class="form-group">
+            <textarea placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+        <div class="contact-info">
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email Us</h4>
+              <p>support@anonymoussupport.com</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <h4>Available</h4>
+              <p>24/7 Support</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Location</h4>
+              <p>Worldwide Service</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <%- include('partials/footer') %>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>

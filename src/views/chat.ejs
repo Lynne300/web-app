@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anonymous Chat</title>
+    <link rel="stylesheet" href="/css/chat.css" />
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="sidebar">
+        <div class="user-profile">
+          <h3>Your Profile</h3>
+          <div class="current-user">
+            <span id="currentUser"><%= currentUser.username %></span>
+            <span class="status-dot online"></span>
+          </div>
+        </div>
+
+        <div class="online-users">
+          <h3>
+            Online Users (<span id="onlineCount"><%= activeCount %></span>)
+          </h3>
+          <ul id="usersList">
+            <% users.forEach(function(user) { %>
+            <li
+              class="user-item <%= user.isOnline ? 'online' : 'offline' %>"
+              data-username="<%= user.username %>"
+            >
+              <div class="user-info">
+                <span class="username"><%= user.username %></span>
+                <span
+                  class="status-dot <%= user.isOnline ? 'online' : 'offline' %>"
+                ></span>
+                <% if (!user.isOnline) { %>
+                <small class="last-seen">
+                  Last seen: <%= new Date(user.lastSeen).toLocaleString() %>
+                </small>
+                <% } %>
+              </div>
+              <% if (user.isOnline) { %>
+              <button
+                onclick="initiateChat('<%= user.username %>')"
+                class="chat-btn"
+              >
+                Chat
+              </button>
+              <% } %>
+            </li>
+            <% }); %>
+          </ul>
+        </div>
+
+        <div class="offline-users">
+          <h3>Offline Users</h3>
+          <ul>
+            <% users.forEach(function(user) { %> <% if (!user.isOnline) { %>
+            <li class="user-item offline" data-username="<%= user.username %>">
+              <div class="user-info">
+                <span class="username"><%= user.username %></span>
+                <span class="status-dot offline"></span>
+                <small class="last-seen">
+                  Last seen: <%= new Date(user.lastSeen).toLocaleString() %>
+                </small>
+              </div>
+            </li>
+            <% } %> <% }); %>
+          </ul>
+        </div>
+      </div>
+
+      <div class="chat-area">
+        <div id="chatHeader" class="chat-header hidden">
+          <div class="chat-partner-info">
+            <h3>Chatting with <span id="chatPartner"></span></h3>
+            <span class="status-indicator"></span>
+          </div>
+          <button onclick="endChat()" class="end-chat-btn">End Chat</button>
+        </div>
+
+        <div id="chat-messages" class="messages-container"></div>
+
+        <form id="chatForm" class="chat-form hidden">
+          <input
+            type="text"
+            id="messageInput"
+            placeholder="Type your message..."
+            autocomplete="off"
+            required
+          />
+          <button type="submit" class="send-btn">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/chat.js"></script>
+    <script>
+      // Initialize with session user
+      const sessionUser = "<%= currentUser.username %>";
+      localStorage.setItem("username", sessionUser);
+    </script>
+  </body>
+</html>
