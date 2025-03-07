@@ -38,7 +38,7 @@ anonymous-web-app
    ```
 2. Navigate to the project directory:
    ```
-   cd anonymous-web-app
+   cd web-app
    ```
 3. Install the dependencies:
    ```
